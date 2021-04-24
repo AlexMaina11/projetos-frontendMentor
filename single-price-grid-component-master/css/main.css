@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    Font-size: 16px;
+}
+
+.centro {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa {
+    width: 700px;
+    height: 500px;
+    
+    display: grid;
+    grid-template-areas: 
+    "inicio inicio"
+    "meio fim";
+}
+
+/* primeiro bloco s */
+
+.inicio {
+    border-radius: 15px 15px 0 0;
+    background-color: white;
+    grid-area: inicio;
+    height: 250px;
+    padding: 50px 0 0 30px;
+}
+
+.inicio h1 {
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 25px;
+}
+
+.inicio h2 {
+    color:  hsl(71, 73%, 54%);
+    margin-bottom: 15px;
+}
+
+.inicio .legenda {
+    color: hsl(218, 22%, 67%);
+}
+
+/* meio */
+
+.meio {
+    border-radius: 0 0 0 10px;
+    grid-area: meio;
+    width: 350px;
+    height: 250px;
+    background-color: hsl(179, 62%, 43%);
+    padding-left: 30px;
+
+}
+
+.meio .assinatura {
+    font-size:  1.1rem;
+    padding: 30px 0 30px 0;
+}
+
+.meio .preco {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.meio .preco span {
+    text-align: top;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: 	#D3D3D3;
+}
+
+.meio button {
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.0rem;
+    margin: 30px 0 0 0 ;
+    text-align: center;
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    border: 1px solid transparent;
+    width: 230px;
+    height: 50px;
+    transition: ease .9s;
+}
+
+.meio button:hover {
+    background-color: hsl(71, 73%, 45%);
+}
+
+/* fim */
+
+.fim {
+    border-radius: 0 0 10px 0 ;
+    grid-area: fim;
+    width: 350px;
+    background: hsl(179, 62%, 60%);
+    padding: 30px 150px 0 30px;
+}
+
+.fim .porQue {
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.fim .descricao {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+@media (max-width: 704px) {
+
+    .centro {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0;
+        margin: 0 25px 0 0;
+
+    }
+
+    .caixa {
+        padding: 0;
+        margin: 0 25px 0 0;
+       
+        border-radius: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    /* inicio */
+
+    .inicio {
+        width: 350px;
+        margin-top: 50px;
+        padding: 30px;
+        display: block;
+       
+    }
+
+    .inicio h1 {
+        color: hsl(179, 62%, 43%);
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+
+    }
+    
+    .inicio h2 {
+        color:  hsl(71, 73%, 54%);
+        margin-bottom: 15px;
+        font-size: 1.0rem;
+    }
+    
+    .inicio .legenda {
+        color: hsl(218, 22%, 67%);
+        font-size: 0.9rem; 
+        margin-bottom: 30px;
+        line-height: 1.5rem;
+        display: inline;
+    }
+
+    
+
+    /* meio */
+
+    .meio {
+       width: 350px;
+        display: block;
+        border-radius: 0;
+    }
+
+    .meio .assinatura {
+        font-size:  1.1rem;
+        padding: 30px 0 30px 0;
+    }
+    
+    .meio .preco {
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+    
+    .meio .preco span {
+        text-align: top;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: 	#D3D3D3;
+    }
+    
+    .meio button {
+
+        border-radius: 5px;
+        font-size: 1.0rem;
+        margin: 30px 0 0 0 ;
+        width: 300px;
+        height: 40px;
+        margin: 30px 0 30px 0;
+    }
+    
+    .meio button:hover {
+        background-color: hsl(71, 73%, 45%);
+    }
+
+    /* fim */
+
+    .fim {
+        width: 350px;
+        
+        border-radius: 0 0 15px 15px;
+        padding: 30px 150px 0 30px;
+    }
+
+    .fim .porQue {
+        font-size: 1.1rem;
+        padding-bottom: 10px;
+        color: white;
+    }
+    
+    .fim .descricao {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+}
